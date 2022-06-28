@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Parallel tests" parallel="tests" verbose="1" thread-count="2">
+    <test name="ChromeAccTestsAfterRegistration">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="headless" value="false"/>
+        <classes>
+            <class name="tests.VacancyPageTests"/>
+        </classes>
+    </test>
+
+    <test name="FFAccTestsAfterRegistration">
+        <parameter name="browser" value="FireFox"/>
+        <parameter name="headless" value="false"/>
+        <classes>
+            <class name="tests.VacancyPageTests"/>
+        </classes>
+    </test>
+
+    <test name="EdgeAccTestsAfterRegistration">
+        <parameter name="browser" value="Edge"/>
+        <parameter name="headless" value="false"/>
+        <classes>
+            <class name="tests.VacancyPageTests"/>
+        </classes>
+    </test>
+</suite>
